@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Telnyx Phone Number Filler",
+  "version": "1.0",
+  "description": "Phone number filler for L3, AT&T, and Verizon carriers",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Telnyx Phone Number Filler"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
